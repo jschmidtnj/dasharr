@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="manifest" href="manifest.json">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -45,7 +45,7 @@
         }
 
         .carousel-item:nth-child(1) {
-          background-image: url('./home.jpg');
+          background-image: url('/images/home.jpg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -120,66 +120,66 @@
             <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
               <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white text-center">
-                  <h1 class="mb-3">Links</h1>
-                  <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                  <!-- <h1 class="mb-3">Links</h1> -->
+                  <!-- <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="32400"
+                    sub="plex"
                     >Plex</a
                   >
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="7878"
+                    sub="radarr"
                     >Radarr</a
                   >
                   <br />
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="8989"
+                    sub="sonarr"
                     >Sonarr</a
                   >
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="8686"
+                    sub="lidarr"
                     >Lidarr</a
                   >
                   <br />
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="8787"
+                    sub="readarr"
                     >Readarr</a
                   >
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="6767"
+                    sub="bazarr"
                     >Bazarr</a
                   >
                   <br />
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="8112"
+                    sub="deluge"
                     >Deluge</a
                   >
                   <a
-                    class="btn btn-outline-light btn-lg m-2 get-port"
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
                     href="/"
                     role="button"
-                    port="9117"
+                    sub="jackett"
                     >Jackett</a
-                  >
+                  > -->
                 </div>
               </div>
             </div>
@@ -228,13 +228,15 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <!-- PWA -->
+  <script src="/scripts/pwa-handler.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript">
   function setHrefs() {
-    const elements = document.getElementsByClassName('get-port');
+    const elements = document.getElementsByClassName('get-subdomain');
     for (let i = 0; i < elements.length; i++) {
-      const port = elements[i].getAttribute('port');
-      elements[i].setAttribute('href', `${window.location.protocol}//${window.location.hostname}:${port}`);
+      const sub = elements[i].getAttribute('sub');
+      elements[i].setAttribute('href', `${window.location.protocol}//${sub}.${window.location.hostname}`);
     }
     this.href = window.location.protocol + "//" + window.location.hostname + ":8080/other/";
   }
