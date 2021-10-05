@@ -180,6 +180,49 @@
                     sub="jackett"
                     >Jackett</a
                   >
+                  <br />
+                  <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
+                    href="/"
+                    role="button"
+                    sub="calibre"
+                    >Calibre</a
+                  >
+                  <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
+                    href="/"
+                    role="button"
+                    sub="test0"
+                    >Test 0</a
+                  >
+                  <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
+                    href="/"
+                    role="button"
+                    sub="test1"
+                    >Test 1</a
+                  >
+                  <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
+                    href="/"
+                    role="button"
+                    sub="test2"
+                    >Test 2</a
+                  >
+                  <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
+                    href="/"
+                    role="button"
+                    sub="test3"
+                    >Test 3</a
+                  >
+                  <a
+                    class="btn btn-outline-light btn-lg m-2 get-subdomain"
+                    href="/"
+                    role="button"
+                    sub="test4"
+                    >Test 4</a
+                  >
                 </div>
               </div>
             </div>
@@ -233,12 +276,11 @@
   <!-- Custom scripts -->
   <script type="text/javascript">
   function setHrefs() {
-    const elements = document.getElementsByClassName('get-subdomain');
-    for (let i = 0; i < elements.length; i++) {
-      const sub = elements[i].getAttribute('sub');
-      elements[i].setAttribute('href', `${window.location.protocol}//${sub}.${window.location.hostname}`);
+    const subdomainElements = document.getElementsByClassName('get-subdomain');
+    for (let i = 0; i < subdomainElements.length; i++) {
+      const sub = subdomainElements[i].getAttribute('sub');
+      subdomainElements[i].setAttribute('href', `${window.location.protocol}//${sub}.${window.location.hostname}`);
     }
-    this.href = window.location.protocol + "//" + window.location.hostname + ":8080/other/";
   }
   </script>
 </html>
