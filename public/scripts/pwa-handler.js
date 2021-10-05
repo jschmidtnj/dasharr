@@ -1,10 +1,11 @@
-// Reference the serviceWorker.
-const serviceWorker = navigator.serviceWorker;
-
-// Register our ServiceWorker script, if serviceWorker is available.
-if (serviceWorker) {
-    serviceWorker
-        .register("/service-worker.js")
-        .then(() => console.log("ServiceWorker Registered to the Application!"))
-        .catch(() => console.log("Failed to Register the ServiceWorker."));
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').then(function (registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
 }

@@ -15,3 +15,7 @@
 ## ports to allow ingress / egress
 
 22, 80, 443, 6000, 7000, 8080
+
+## pwa
+
+Use [development mode on cloudflare](https://developers.cloudflare.com/cache/reference/development-mode) to prevent caching issues. See [this](https://developers.google.com/web/fundamentals/primers/service-workers#install_a_service_worker) for info about setting up pwa's.
