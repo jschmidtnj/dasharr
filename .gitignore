@@ -1,3 +1,7 @@
+# ignore ini files (with secret key)
+frpc.ini
+frps.ini
+
 # Logs
 logs
 *.log
