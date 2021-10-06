@@ -19,3 +19,7 @@
 ## pwa
 
 Use [development mode on cloudflare](https://developers.cloudflare.com/cache/reference/development-mode) to prevent caching issues. See [this](https://developers.google.com/web/fundamentals/primers/service-workers#install_a_service_worker) for info about setting up pwa's.
+
+## cost
+
+hosting is free on gcp using an e2-micro machine. data egress costs $0.108 / hour, streaming at 2Mbps ($0.12 / gb, ~900mb / hr). 40 hours is $4.32.
