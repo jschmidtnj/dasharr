@@ -23,3 +23,6 @@ Use [development mode on cloudflare](https://developers.cloudflare.com/cache/ref
 ## cost
 
 hosting is free on gcp using an e2-micro machine. data egress costs $0.108 / hour, streaming at 2Mbps ($0.12 / gb, ~900mb / hr). 40 hours is $4.32.
+
+use bmon to view network usage
+
