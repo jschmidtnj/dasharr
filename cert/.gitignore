@@ -1,0 +1,12 @@
+# ignore everything
+*
+
+# except this file
+!.gitignore
+
+# and bash scripts
+!*.sh
+
+# and config file
+!my-openssl.cnf
+
