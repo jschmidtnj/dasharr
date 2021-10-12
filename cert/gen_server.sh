@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip_address="35.211.77.82"
+ip_address="34.139.205.36"
 
 openssl genrsa -out server.key 2048
 
