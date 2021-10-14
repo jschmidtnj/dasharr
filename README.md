@@ -18,7 +18,7 @@
 
 ## rdp
 
-for rdp connection, use remmina, connect to direct.jframe.work
+for rdp connection, use remmina, connect to direct.jarvi.sbs
 
 better performance: https://askubuntu.com/a/1283785
 
