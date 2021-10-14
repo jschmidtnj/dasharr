@@ -14,7 +14,13 @@
 
 ## ports to allow ingress / egress
 
-80,443,2020,2121,5001-5005,6000,7000,7500
+80,443,2020,2121,3389,5001-5005,6000,7000,7500
+
+## rdp
+
+for rdp connection, use remmina, connect to direct.jframe.work
+
+better performance: https://askubuntu.com/a/1283785
 
 ## pwa
 
