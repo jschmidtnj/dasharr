@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+gcloud config set project mywebsite2
+gcloud compute instances stop jarvis-4
+

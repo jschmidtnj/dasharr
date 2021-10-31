@@ -32,3 +32,9 @@ hosting is free on gcp using an e2-micro machine. data egress costs $0.108 / hou
 
 use bmon to view network usage
 
+## other links
+
+- https://1lib.us
+- http://libgen.li
+- https://sci-hub.se/lang/en
+
